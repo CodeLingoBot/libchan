@@ -500,7 +500,7 @@ type ServerRoutine func(t *testing.T, listener net.Listener)
 var ClientServerTimeout = 300 * time.Millisecond
 var DumpStackOnTimeout = true
 
-// SpawnClientServer ensures two routines are run in parallel and a
+// SpawnClientServerTest ensures two routines are run in parallel and a
 // failure in one will cause the test to fail
 func SpawnClientServerTest(t *testing.T, client ClientRoutine, server ServerRoutine) {
 	endClient := make(chan bool)

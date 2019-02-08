@@ -207,7 +207,7 @@ func (s *stream) CreateNestedReceiver() (libchan.Receiver, libchan.Sender, error
 	return &receiver{stream: stream}, &nopSender{stream: stream}, err
 }
 
-// CreateNestedReceiver creates a new channel returning the local
+// CreateNestedSender creates a new channel returning the local
 // sender and the remote receiver.  The remote receiver needs to be
 // sent across the channel before being utilized.
 func (s *stream) CreateNestedSender() (libchan.Sender, libchan.Receiver, error) {
